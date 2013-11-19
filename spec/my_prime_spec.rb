@@ -24,8 +24,11 @@ describe MyPrime do
       end
     end
     it "should return an empty arry if called with argument = 0" do
-      length = 0
-      MyPrime.first(length).should == []
+      MyPrime.first(0).should == []
+    end
+    # or just plain lazy
+    it "should should return the same as Prime.first(n)" do
+      MyPrime.first(100).should == Prime.first(100)
     end
   end
 end
